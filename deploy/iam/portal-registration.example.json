@@ -1,0 +1,163 @@
+{
+  "applicationCode": "crm",
+  "displayName": "CRM 管理台",
+  "icon": "project",
+  "microfrontendName": "crm",
+  "entry": "https://portal.example.test/app/crm/",
+  "routePrefix": "/app/crm",
+  "apiBase": "/api/crm",
+  "targetOrigin": "http://crm-web:80",
+  "menuPagePermission": "crmWeb:page",
+  "oauth": {
+    "clientId": "<PUBLIC_CLIENT_ID>",
+    "clientType": "PUBLIC",
+    "grantTypes": [
+      "authorization_code",
+      "refresh_token"
+    ],
+    "requireProofKey": true,
+    "redirectUri": "https://portal.example.test/app/crm/oauth-callback",
+    "scopes": [
+      "openid",
+      "profile"
+    ]
+  },
+  "menuTree": [
+    {
+      "code": "crm-dashboard",
+      "name": "工作台",
+      "nodeType": "PAGE",
+      "icon": "dashboard",
+      "route": "/",
+      "requiredPagePermission": "crmWeb:page",
+      "presentationMode": "STANDARD",
+      "sortOrder": 1,
+      "children": []
+    },
+    {
+      "code": "crm-directory",
+      "name": "客户与商品",
+      "nodeType": "GROUP",
+      "icon": "folder",
+      "route": null,
+      "requiredPagePermission": null,
+      "sortOrder": 2,
+      "children": [
+        {
+          "code": "crm-customers",
+          "name": "客户",
+          "nodeType": "PAGE",
+          "icon": "users",
+          "route": "/customers",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 1,
+          "children": []
+        },
+        {
+          "code": "crm-offerings",
+          "name": "商品目录",
+          "nodeType": "PAGE",
+          "icon": "database",
+          "route": "/offerings",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "code": "crm-trading",
+      "name": "交易管理",
+      "nodeType": "GROUP",
+      "icon": "project",
+      "route": null,
+      "requiredPagePermission": null,
+      "sortOrder": 3,
+      "children": [
+        {
+          "code": "crm-opportunities",
+          "name": "商机",
+          "nodeType": "PAGE",
+          "icon": "analytics",
+          "route": "/opportunities",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 1,
+          "children": []
+        },
+        {
+          "code": "crm-quotations",
+          "name": "报价单",
+          "nodeType": "PAGE",
+          "icon": "document",
+          "route": "/quotations",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 2,
+          "children": []
+        },
+        {
+          "code": "crm-orders",
+          "name": "订单",
+          "nodeType": "PAGE",
+          "icon": "project",
+          "route": "/orders",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "code": "crm-fulfillment-management",
+      "name": "履约管理",
+      "nodeType": "GROUP",
+      "icon": "workflow",
+      "route": null,
+      "requiredPagePermission": null,
+      "sortOrder": 4,
+      "children": [
+        {
+          "code": "crm-fulfillment",
+          "name": "交付",
+          "nodeType": "PAGE",
+          "icon": "workflow",
+          "route": "/fulfillment",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 1,
+          "children": []
+        },
+        {
+          "code": "crm-consumers",
+          "name": "承接方",
+          "nodeType": "PAGE",
+          "icon": "data-service",
+          "route": "/consumers",
+          "requiredPagePermission": "crmWeb:page",
+          "presentationMode": "STANDARD",
+          "sortOrder": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "code": "crm-audit",
+      "name": "审计记录",
+      "nodeType": "PAGE",
+      "icon": "search",
+      "route": "/audit",
+      "requiredPagePermission": "crmWeb:page",
+      "presentationMode": "STANDARD",
+      "sortOrder": 5,
+      "children": []
+    }
+  ],
+  "defaultEntry": {
+    "pageMenuCode": "crm-dashboard",
+    "entryPath": "/"
+  }
+}

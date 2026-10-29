@@ -1,0 +1,61 @@
+{
+  "pagePermissions": [
+    "crmWeb:page"
+  ],
+  "apiPermissions": [
+    "crm.customer.create",
+    "crm.customer.read",
+    "crm.customer.list",
+    "crm.customer.disable",
+    "crm.customer.activate",
+    "crm.customer.merge",
+    "crm.customer.transfer",
+    "crm.contact.create",
+    "crm.contact.read",
+    "crm.contact.list",
+    "crm.offering.create",
+    "crm.offering.read",
+    "crm.offering.list",
+    "crm.offering.publish",
+    "crm.offering.disable",
+    "crm.opportunity.create",
+    "crm.opportunity.read",
+    "crm.opportunity.list",
+    "crm.opportunity.stage",
+    "crm.opportunity.transfer",
+    "crm.quotation.create",
+    "crm.quotation.read",
+    "crm.quotation.list",
+    "crm.quotation.edit",
+    "crm.quotation.issue",
+    "crm.quotation.confirm",
+    "crm.quotation.withdraw",
+    "crm.quotation.renegotiate",
+    "crm.quotation.transfer",
+    "crm.order.read",
+    "crm.order.list",
+    "crm.fulfillment.read",
+    "crm.fulfillment.list",
+    "crm.fulfillment.report",
+    "crm.fulfillment.reset",
+    "crm.fulfillment.consumer-admin",
+    "crm.audit.read"
+  ],
+  "dataPermissions": [
+    {
+      "resource": "crm-customer",
+      "actions": [
+        "read",
+        "write"
+      ],
+      "dimensions": [
+        {
+          "name": "owner",
+          "operators": [
+            "EQ"
+          ]
+        }
+      ]
+    }
+  ]
+}

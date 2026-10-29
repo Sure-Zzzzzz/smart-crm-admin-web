@@ -1,0 +1,18 @@
+services:
+  crm-web-nginx:
+    # 仅用于本机 Nginx 配置诊断；Gateway 形态由 simple-crm-server-runtime 统一启动。
+    profiles: [diagnostic]
+    image: dockerpull.pw/nginx:latest
+    container_name: crm-web-nginx
+    restart: unless-stopped
+    networks:
+      - crm-internal
+    ports:
+      - "127.0.0.1:${CRM_WEB_HTTP_PORT:-8199}:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../dist:/www/crm:ro
+networks:
+  crm-internal:
+    external: true
+    name: crm-local_internal
